@@ -1,9 +1,33 @@
 {
   "extension": {
     "name": "depgraph",
-    "version": "0.1.0"
-  },
-  "download": {
-    "url": ""
+    "version": "0.1.0",
+    "type": "command",
+    "command": {
+      "name": "depgraph",
+      "under": null
+    },
+    "download": {
+      "darwin_amd64": {
+        "url": "https://snyk-se.s3.us-west-2.amazonaws.com/snyk-ext-depgraph/snyk_ext_depgraph_darwin_amd64",
+        "sha256": "abc123"
+      }
+    },
+    "arguments": {
+      "subcommands": [
+        {
+          "name": "monitor",
+          "description": "Monitor a dependency graph in the Snyk web app",
+          "options": [
+            {
+              "name": "file",
+              "description": "Path to the dependency graph file",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
   }
 }
